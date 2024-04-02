@@ -36,6 +36,7 @@
 html {
     -webkit-text-size-adjust: 100%;
     line-height: 1.15;
+    scroll-behavior: smooth;
 }
 body {
     background-color: var(--page-bg);
@@ -81,17 +82,18 @@ p {
     top: 0;
     right: 0;
     left: 0;
+    z-index: 0;
 }
 .navi-container{
     float: left; 
-    padding: 11.3px 0;  
+    padding: 11.3px 0; 
 }
 .navi-btn {
     text-decoration: none;
     cursor: pointer;
     color: var(--navi-btn-text);
     padding: 0.5rem;
-    border-radius: var(--def-brdr-rad);
+    border-radius: 10px;
     margin-inline-end: 1rem;
     transition: var(--def-transition);
 }
@@ -99,12 +101,58 @@ p {
     color: var(--navi-btn-hover-text);
     background-color: var(--navi-btn-hover);
 }
+.collapsed-navi-container {
+    position: relative;
+    display: none;
+}
+.navi-dropdown-btn {
+    position: relative;
+    cursor: pointer;
+    background-color: #1b1c22;
+    border: none;
+    padding: 9px 10px;
+    margin: 3.5px 0;
+    border-radius: 5px;
+    transition: var(--def-transition);
+    z-index: 1;
+}
+.navi-dropdown-btn:hover {
+    background-color: #202128;
+}
+.icon-bar {
+    background-color: var(--primary-text);
+    display: block;
+    height: 2px;
+    width: 22px;
+    border-radius: 5px;
+}
+.navi-dropdown-content {
+    display: none;
+    position: absolute;
+    overflow-y: auto;
+    background-color: #1d1d1d;
+    padding: 1rem;
+    margin-top: 16px;
+    border-radius: 5px;
+}
+.navi-dropdown-content .navi-btn {
+    display: block;
+    margin-inline-end: 0;
+}
+.navi-dropdown-content .navi-btn:hover {
+    background-color: #151515;
+}
+.show {
+    display: block;
+}
 @media(max-width: 768px) {
     .navi-container {  
         display: none;  
     }
+    .collapsed-navi-container {
+        display: inline-block;
+    }
 }
-
 
 .pagebottom {
     background-color: var(--navi-bg);
@@ -150,7 +198,7 @@ p {
     fill: var(--moon-icon);
 }
 
-.introduction-content {
+#introduction-content {
     max-width: 1024px;
     margin: auto;
     padding: 1rem;
@@ -165,7 +213,7 @@ p {
     margin-inline-end: 3rem;
 }
 @media(max-width: 1024px) {
-    .introduction-content {
+    #introduction-content {
         flex-direction: column;
         align-items: center;
     }
@@ -207,7 +255,7 @@ p {
 
 
 
-.experience-content {
+#experience-content {
     max-width: 1024px;
     margin: auto;
     background-color: var(--section-bg);

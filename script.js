@@ -9,3 +9,21 @@ function switchTheme() {
     localStorage.setItem("theme", newTheme);
 }
 toggleSwitch.addEventListener("click", switchTheme);
+
+const menu = document.querySelector(".navi-dropdown-content");
+function showDropdownMenu() {
+    menu.classList.toggle("show");
+}
+
+window.onclick = function(event) {
+    if (!event.target.matches(".navi-dropdown-btn")) {
+        var dropdowns = document.querySelectorAll(".navi-dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains("show")) {
+                openDropdown.classList.remove("show");
+            }
+        }
+    }
+}
