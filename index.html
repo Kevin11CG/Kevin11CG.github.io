@@ -6,6 +6,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+        // add smooth scrolling to all links
+        $("a").on('click', function(event) {
+
+            // make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+            // prevent default anchor click behavior
+            event.preventDefault();
+
+            // store hash
+            var hash = this.hash;
+
+            // jQuery's animate() method adds smooth scrolling
+            // number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function(){
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+            });
+            }
+        });
+        });
+        </script>
         <script>
             let lStorage = localStorage.getItem("theme"),
                 setTheme = lStorage;
@@ -37,7 +63,7 @@
             </div>          
         </nav>
         <header id="introduction-content">
-            <img class="profile-image" src="documents/KG_professional_headshot.jpg" alt="Pressional Photo" style="width: 400px;"/>
+            <img class="profile-image" src="documents/KG_professional_headshot.jpg" alt="Pressional Headshot" style="width: 400px;"/>
             <div>
                 <h2 class="header-text">Hello. My name is Kevin Green. I'm a college graduate looking to start his software development career.</h2>
                 <p class="justify">
@@ -69,7 +95,7 @@
                     </p>
                     <a class="external-link" href="https://cotingasoft.com" target="_blank">Visit CotingaSoft Website</a>
                 </div>
-                <img class="experience-image" src="documents/cotinga_soft_logo_transparent.png" alt="A Group Photo of all Participants in the GNO Internship Program" style="background-color: #262626; padding: 1rem;"/>
+                <img class="experience-image" src="documents/cotinga_soft_logo_transparent.png" alt="All Participants in the GNO Internship Program" style="background-color: #262626; padding: 1rem;"/>
             </article>
         </section>
         <footer class="pagebottom">
