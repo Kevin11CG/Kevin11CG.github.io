@@ -159,11 +159,14 @@ a {
 }
 
 #pagebottom {
+    position: relative;
     background-color: var(--navi-bg);
     padding: 1rem 2rem;
     border-radius: var(--def-brdr-rad) var(--def-brdr-rad) 0 0;
     align-items: center;
     text-align: center;
+    right: 0;
+    left: 0;
 }
 .contact-container {
     display: inline-flex;
