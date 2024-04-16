@@ -22,7 +22,7 @@
 }
 :root {
     --primary-text: #9baebf;
-    --link-text: #0366d6;
+    --link-text: #65c1ff;
     --navi-bg: #292a33;
     --navi-btn-text: var(--primary-text);
     --navi-btn-hover: #070811;
@@ -45,12 +45,18 @@ body {
     
     transition: var(--def-transition);
 }
+h2, h3, h4 {
+    font-weight: 600;
+    color: var(--primary-text);
+}
 p {
     font-size: 1.1rem;
 }
+a {
+    text-decoration: none;
+}
 .header-text{
     font-size: 3rem;
-    color: var(--primary-text);
     margin: 0;
 }
 .justify {
@@ -61,7 +67,6 @@ p {
     color: #f9feff;
 }
 .external-link {
-    text-decoration: none;
     color: var(--link-text);
 }
 .external-link:hover {
@@ -153,14 +158,42 @@ p {
     }
 }
 
-.pagebottom {
+#pagebottom {
     background-color: var(--navi-bg);
-    padding: 1rem;
+    padding: 1rem 2rem;
     border-radius: var(--def-brdr-rad) var(--def-brdr-rad) 0 0;
     align-items: center;
+    text-align: center;
 }
 .contact-container {
-    
+    display: inline-flex;
+    position: relative;
+}
+.contact-details {
+    width: 240px;
+    padding: 0 1rem;
+    align-items: center;
+    gap: .5rem;
+}
+.phone-icon, .email-icon, .linkedin-icon, .github-icon {
+    transition: var(--def-transition);
+    fill: var(--primary-text);
+}
+.linkedin-icon:hover, .github-icon:hover {
+    fill: var(--navi-btn-hover-text);
+}
+@media(max-width: 1024px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.social-media-container {
+    position: relative;
+    margin-top: 1rem;
+}
+.social-link {
+    padding: 0 1rem;
 }
 
 .theme-switch-container {
