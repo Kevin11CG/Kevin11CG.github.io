@@ -244,7 +244,7 @@ a {
 }
 .profile-image {
     object-fit: cover;
-    border-radius: 10%;
+    border-radius: 2.5%;
     margin-inline-end: 3rem;
 }
 @media(max-width: 1024px) {
@@ -308,7 +308,7 @@ a {
 .experience-image {
     object-fit: cover;
     width: 500px;
-    border-radius: 10%;
+    border-radius: 2.5%;
     margin-left: 3rem;
 }
 @media(max-width: 1024px) {
@@ -321,9 +321,32 @@ a {
         margin-right: 3rem;
     }
 }
-.resume-container {
+
+#work-content {
+    max-width: 1024px;
+    margin: auto;
     background-color: var(--section-bg);
-    display: flex;
     padding: 1rem;
     border-radius: var(--def-brdr-rad);
+    margin-bottom: 1rem;
+}
+.work-article {
+    display: flex;
+    padding: 1rem;
+}
+.work-image {
+    object-fit: cover;
+    width: 500px;
+    border-radius: 2.5%;
+    margin-left: 3rem;
+}
+@media(max-width: 1024px) {
+    .work-article {
+        flex-direction: column;
+        align-items: center;
+    }
+    .work-image {
+        margin-top: 1rem;
+        margin-right: 3rem;
+    }
 }
