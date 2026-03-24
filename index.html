@@ -8,43 +8,11 @@
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script>
-        $(document).ready(function(){
-        // add smooth scrolling to all links
-        $("a").on('click', function(event) {
-
-            // make sure this.hash has a value before overriding default behavior
-            if (this.hash !== "") {
-            // prevent default anchor click behavior
-            event.preventDefault();
-
-            // store hash
-            var hash = this.hash;
-
-            // jQuery's animate() method adds smooth scrolling
-            // number (800) specifies the number of milliseconds it takes to scroll to the specified area
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top
-            }, 800, function(){
-                // Add hash (#) to URL when done scrolling (default click behavior)
-                window.location.hash = hash;
-            });
-            }
-        });
-        });
-        </script>
-        <script>
-            let lStorage = localStorage.getItem("theme"),
-                setTheme = lStorage;
-            /* user preference sets theme if local storage has no item */
-            if(!lStorage){setTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";}
-            document.documentElement.setAttribute("data-theme", setTheme);
-        </script>
     </head>
     <body>
         <nav class="pagetop pagetop-fixed pagetop-expanded">
             <div class="collapsed-navi-container">
-                <button onclick="showDropdownMenu()" class="navi-dropdown-btn">
+                <button class="navi-dropdown-btn">
                     <span class="icon-bar"></span>
                     <span class="icon-bar" style="margin-top: 5px;"></span>
                     <span class="icon-bar" style="margin-top: 5px;"></span>
@@ -78,7 +46,7 @@
                 </p>
                 <div class="resume-download-btn">
                     <svg width="25px"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.292 16.706a1 1 0 0 0 1.416 0l3-3a1 1 0 0 0-1.414-1.414L13 13.586V4a1 1 0 0 0-2 0v9.586l-1.293-1.293a1 1 0 0 0-1.414 1.414zM17 19H7a1 1 0 0 0 0 2h10a1 1 0 0 0 0-2z" class="download-icon"/></svg>
-                    <a href="documents/Kevin Green Resume 2026.pdf" download="Kevin Green Resume" class="resume-link">See my resume</a>
+                    <a href="documents/Kevin_Green_Resume.pdf" download="Kevin Green Resume" class="resume-link">See my resume</a>
                 </div>
             </div>
         </header>
@@ -94,12 +62,11 @@
                     </p>
                     <p>
                         I collaborated with a small, cross-functional team of three senior software developers and one junior software developer. 
-                        I attended meetings with clients to gather project requirements and ensure current projects are within their expectations. 
-                        I also engaged in team meetings to discuss the UI design for three separate client projects. 
-                        Under mentorship, I learned to implement agile practices and conduct code reviews, accelerating software development. 
-                        I upgraded five client project libraries by modifying the version numbers within their respective package.json files and then updated them using npm. 
-                        To quickly confirm that the newer framework versions were compatible, I learned to use Docker to test and deploy the web apps. 
-                        Finally, for almost a dozen different projects, I documented current client AWS resources (EC2, Route 53, SES, etc.) and identified cost-saving opportunities that improved system efficiency.
+                        I assisted in designing some user interfaces to better fit the needs identified from user experience research.
+                        I also built and implemented the front end components of a login feature for a web application while the backend-focused devs built the API endpoints.
+                        I learned to navigate backend codebases, removing deprecated REST API calls and updated dependencies to current versions. 
+                        To quickly confirm that the newer dependency versions were compatible, I learned to use Docker to quickly test and deploy the web apps. 
+                        Finally, I identified obsolete versions of certain AWS resources and suggested upgrades to maximize usage of said resources for little to no increase in pricing.
                     </p>
                     <a class="external-link" href="https://cotingasoft.com" target="_blank">Visit CotingaSoft Website</a>
                 </div>
@@ -107,7 +74,7 @@
             </article>
         </section>
         <section id="work-content">
-            <h2 class="header-text">Work</h2>
+            <h2 class="header-text">Projects</h2>
             <article class="work-article">
                 <div>
                     <h3 class="article-header">NACHOS Multiprogramming Project</h3>
